@@ -2,6 +2,14 @@ package com.algo;
 
 import java.util.Arrays;
 
+/**
+ * pick a number
+ * count occurencies
+ * if occurence is an even number(meaning they are pairs)
+ * move on to the next number
+ * Repeat till you find odd occurence
+ */
+
 public class OddOccurencesTest {
 
     public static int solution(int[] A) {
