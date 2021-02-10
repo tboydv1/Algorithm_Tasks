@@ -2,13 +2,10 @@ package com.algo;
 
 public class CountingValleys {
 
-    enum LEVELS {SEA, VALLEY, MOUNTAIN}
 
     public static int countingValleys(int steps, String path) {
         // Write your code here
-
-        LEVELS hikerLevel = LEVELS.SEA;
-
+        
 
         int stepsToSeaLevel = 0, valleys = 0, mountains = 0, nextPath = 0;
         char[] pathArray = path.toCharArray();
