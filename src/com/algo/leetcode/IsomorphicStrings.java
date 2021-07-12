@@ -23,13 +23,15 @@ public class IsomorphicStrings {
 //                "egg",
 //                "add"));
 
-        System.out.println(isIsomorphic(
-                "egcd",
-                "adfd"));
+//        System.out.println(isIsomorphic(
+//                "egcd",
+//                "adfd"));
+
+        System.out.println(normalize("egcd") + " "+normalize("adfd"));
 
     }
 
-    public static boolean isIsomorphic(String s, String t) {
+    public static boolean isIsomorphicA(String s, String t) {
 
         String[] sArr = s.split("");
         String[] tArr = t.split("");
@@ -65,9 +67,32 @@ public class IsomorphicStrings {
     }
 
 
-    public static boolean isIsomorphic(String s, String t) {
+    public static boolean isIsomorphicB(String s, String t) {
 
+        return normalize(s) == normalize(t);
     }
+
+    public static String normalize(String word){
+
+        Map<String, String> records = new HashMap<>();
+
+        char nextChar = 'a';
+        StringBuilder ans = new StringBuilder();
+
+        for(int i = 0; i < word.length(); i++){
+            char c = word.charAt(i);
+            if(!records.containsKey(String.valueOf(c))){
+                records.put(String.valueOf(c), String.valueOf(nextChar));
+                nextChar += 1;
+                System.out.println(nextChar);
+            }
+            ans.append(records.get(String.valueOf(c)));
+        }
+
+        return ans.toString();
+    }
+
+
 
 
 }
