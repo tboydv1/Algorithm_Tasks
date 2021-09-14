@@ -4,6 +4,11 @@ import java.util.Arrays;
 
 public class ArrayDS {
 
+
+    ArrayDS() throws RuntimeException{
+        throw new NullPointerException();
+    }
+
     // Complete the hourglassSum function below.
     static int hourglassSum(int[][] arr) {
 
@@ -31,22 +36,37 @@ public class ArrayDS {
     }
 
     public static void main(String[] args) {
-        int [][] arr = { {1,1,1,0,0,0},
+        int[] []arrSums = new int[16][];
+       ArrayDS arrayDS = null;
+        try{
+            arrayDS = new ArrayDS();
+            System.out.println(arrayDS);
+        }catch (Exception e){
+            System.out.println("Exception was thrown");
+            System.out.println(arrayDS);
+        }
 
-                {0,1,0,0,0,0},
+        System.out.println(" "  == new String(" "));
 
-                {1, 1,1, 0, 0, 0},
 
-                {0, 0 ,2 ,4 ,4 ,0},
-
-                {0 ,0 ,0 ,2 ,0 ,0}
-
-                ,{0, 0 ,1 ,2 ,4 ,0}};
-
-        int result = hourglassSum(arr);
-
-        System.out.println("Result --> "+result);
+//        int [][] arr = { {1,1,1,0,0,0},
+//
+//                {0,1,0,0,0,0},
+//
+//                {1, 1,1, 0, 0, 0},
+//
+//                {0, 0 ,2 ,4 ,4 ,0},
+//
+//                {0 ,0 ,0 ,2 ,0 ,0}
+//
+//                ,{0, 0 ,1 ,2 ,4 ,0}};
+//
+//        int result = hourglassSum(arr);
+//
+//        System.out.println("Result --> "+result);
     }
+
+
 
 
 
